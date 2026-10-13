@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shreevarnika Nagammal — Software Engineer · Computerized System Validation</title>
+<meta name="description" content="Portfolio of Shreevarnika Nagammal — Software Engineer specializing in Computerized System Validation, software testing and life-sciences compliance. Capgemini · Smith+Nephew · Olympus · Pune.">
+<!-- ==========================================================
+     ✅ EMAIL + LINKEDIN are set. Her photo loads from this repo:
+     raw.githubusercontent.com/PAWARSAHIL07/REUME.VARNIKA/main/photo_6212834279054578345_y.jpg
+     (Repo must stay PUBLIC. If the photo is renamed, update the
+     URL inside the two <img> tags. Fallback "SN" monogram shows
+     automatically if the photo can't load.)
+=========================================================== -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F6F1E7'/%3E%3Cpath d='M6 18h6l3-8 4 14 3-6h4' stroke='%23C1502E' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F1E7; --paper2:#EDE5D4; --paper3:#E4DAC5;
+  --ink:#25211A; --mut:#6F6657;
+  --clay:#C1502E; --sage:#5E7A54; --ochre:#B08429; --slate:#47698C; --rose:#A4566B;
+  --acc:var(--clay);
+  --line:rgba(37,33,26,.16); --line2:rgba(37,33,26,.3);
+  --dark:#23201A; --cream:#F1EADB;
+  --disp:'Fraunces',serif; --body:'Archivo',sans-serif; --mono:'IBM Plex Mono',monospace; --hand:'Caveat',cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+::selection{background:var(--acc);color:var(--paper)}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--paper2)}
+::-webkit-scrollbar-thumb{background:#C9BEA6;border-radius:6px;border:2px solid var(--paper2)}
+a{color:inherit}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
+img{display:block;max-width:100%}
+
+/* ---------- paper grain (very subtle) ---------- */
+.grain{position:fixed;inset:-50%;width:200%;height:200%;z-index:1200;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 9s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-1.5%,2%)}50%{transform:translate(2%,-1.5%)}75%{transform:translate(-2%,-2%)}100%{transform:translate(1.5%,1.5%)}}
+
+/* ---------- progress + header ---------- */
+#pbar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--acc);z-index:1000;transition:background-color .6s}
+header{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(246,241,231,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.h-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:26px;padding:15px 26px}
+.logo{font-family:var(--disp);font-weight:600;font-size:1.05rem;letter-spacing:-.01em;white-space:nowrap;text-decoration:none}
+.logo em{font-style:italic;color:var(--acc);transition:color .6s}
+header nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+header nav::-webkit-scrollbar{display:none}
+header nav a{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--mut);text-decoration:none;white-space:nowrap;padding:6px 11px;border-radius:99px;transition:color .25s,background-color .25s}
+header nav a:hover{color:var(--ink);background:var(--paper2)}
+header nav a.active{color:var(--paper);background:var(--ink)}
+.openpill{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--sage);border:1px solid rgba(94,122,84,.4);padding:7px 13px;border-radius:99px;white-space:nowrap}
+.openpill .dot{width:7px;height:7px;border-radius:50%;background:var(--sage);position:relative}
+.openpill .dot::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--sage);animation:ping 2.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(.4);opacity:.9}80%,100%{transform:scale(1.5);opacity:0}}
+@media(max-width:860px){.openpill .txt{display:none}.openpill{padding:7px 9px}}
+
+/* ---------- section chrome ---------- */
+section{padding:110px 0;scroll-margin-top:70px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px;position:relative}
+.kick{display:flex;align-items:center;gap:14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;color:var(--mut);margin-bottom:26px;text-transform:uppercase}
+.kick::before{content:'';width:34px;height:1px;background:var(--acc);transition:background-color .6s}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(2.1rem,4.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em;max-width:820px}
+h2 em{font-style:italic;color:var(--acc);transition:color .6s}
+.lead-in{color:var(--mut);max-width:640px;margin-top:18px;font-size:1.06rem}
+.rev{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rev.vis{opacity:1;transform:none}
+
+/* ---------- hero ---------- */
+#hero{padding:170px 0 0;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between}
+.h-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.h-hello{font-family:var(--hand);font-size:1.5rem;color:var(--clay);margin-bottom:10px;transform:rotate(-2deg);display:inline-block}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(3rem,7.4vw,6.2rem);line-height:1;letter-spacing:-.02em}
+h1 .ln{display:block}
+h1 em{font-style:italic;font-weight:400}
+.h-role{margin:26px 0 0;font-size:clamp(1.08rem,1.7vw,1.3rem);line-height:1.55;max-width:520px;font-weight:500}
+.h-role b{color:var(--clay);font-weight:600}
+.h-chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.h-chips span{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;border:1px solid var(--line2);padding:7px 13px;border-radius:99px;color:var(--mut)}
+.h-chips span b{color:var(--ink);font-weight:500}
+.h-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-size:.95rem;font-weight:600;padding:14px 26px;border-radius:99px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);text-decoration:none;transition:background-color .25s,color .25s,transform .25s,border-color .4s}
+.btn:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#fff;transition:background-color .4s,border-color .4s,color .25s,transform .25s}
+.btn.primary:hover{background:var(--ink);border-color:var(--ink)}
+.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2}
+
+/* portrait — HER PHOTO, from the GitHub repo */
+.portrait{position:relative;max-width:400px;justify-self:end;width:100%}
+.portrait .frame{border:1px solid var(--ink);border-radius:14px;overflow:hidden;box-shadow:14px 14px 0 var(--paper2);position:relative}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;filter:saturate(.88) contrast(1.04)}
+.portrait .frame::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(193,80,46,.12),transparent 45%,rgba(37,33,26,.14));mix-blend-mode:multiply;pointer-events:none}
+.portrait .cap{margin-top:26px;font-family:var(--hand);font-size:1.3rem;color:var(--mut);transform:rotate(-2deg);line-height:1.35}
+.portrait .cap b{color:var(--clay);font-weight:600}
+
+/* ecg divider */
+.ecg{margin-top:70px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:0}
+.ecg svg{display:block;width:100%;height:56px}
+.ecg .base{stroke:rgba(37,33,26,.18);fill:none;stroke-width:1.5}
+.ecg .live{stroke:var(--clay);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:200 1400;animation:trace 7s linear infinite;transition:stroke .6s}
+@keyframes trace{from{stroke-dashoffset:1600}to{stroke-dashoffset:0}}
+.ecg .lbl{position:absolute;right:26px;top:-11px;background:var(--paper);padding:0 12px;font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--mut)}
+
+/* fact strip */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.fact{padding:26px 26px 30px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;color:var(--mut);display:block;margin-bottom:8px;text-transform:uppercase}
+.fact .v{font-family:var(--disp);font-size:1.15rem;font-weight:600;line-height:1.3}
+.fact .v small{display:block;font-family:var(--body);font-weight:400;font-size:.85rem;color:var(--mut);margin-top:4px}
+@media(max-width:960px){.h-grid{grid-template-columns:1fr;gap:60px}.portrait{justify-self:start;margin-top:10px}.facts{grid-template-columns:1fr 1fr}.fact{border-bottom:1px solid var(--line)}}
+
+/* ---------- about ---------- */
+#about{background:var(--paper2)}
+.a-grid{display:grid;grid-template-columns:1.3fr .8fr;gap:70px;margin-top:48px;align-items:start}
+.a-text p{margin-bottom:20px;font-size:1.08rem;line-height:1.85}
+.a-text p b{font-weight:600}
+.a-text .drop{font-family:var(--disp);font-size:1.35rem;line-height:1.5;font-weight:500;border-left:3px solid var(--acc);padding-left:22px;margin:30px 0;transition:border-color .6s}
+.a-text .drop em{font-style:italic;color:var(--clay)}
+.principles{display:grid;gap:12px;margin-top:34px}
+.pr{display:flex;gap:16px;align-items:baseline;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 20px;transition:transform .25s,box-shadow .25s}
+.pr:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(37,33,26,.08)}
+.pr .no{font-family:var(--mono);font-size:10px;color:var(--acc);letter-spacing:.1em;transition:color .6s}
+.pr b{font-size:1rem}
+.pr small{display:block;color:var(--mut);font-size:.88rem;margin-top:3px}
+.qcard{background:var(--dark);color:var(--cream);border-radius:16px;padding:30px 28px;position:sticky;top:96px}
+.qcard .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:rgba(241,234,219,.5);display:block;margin-bottom:16px;text-transform:uppercase}
+.qcard .row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed rgba(241,234,219,.18);font-size:.93rem}
+.qcard .row:last-of-type{border-bottom:0}
+.qcard .row span{color:rgba(241,234,219,.55)}
+.qcard .row b{font-weight:600;text-align:right}
+.qcard .note{margin-top:18px;font-family:var(--hand);font-size:1.25rem;color:#D9A06B;transform:rotate(-1.5deg);line-height:1.35}
+@media(max-width:900px){.a-grid{grid-template-columns:1fr}.qcard{position:static}}
+
+/* ---------- skills (selectable) ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:9px;margin:38px 0 8px}
+.chip{font-size:.85rem;font-weight:500;border:1px solid var(--line2);background:transparent;color:var(--mut);padding:9px 17px;border-radius:99px;transition:color .25s,border-color .25s,background-color .25s}
+.chip:hover{color:var(--ink);border-color:var(--ink)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.count{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--mut);margin:16px 0 10px}
+.sk-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start}
+#sk-list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.sk{display:grid;grid-template-columns:52px 1fr auto;gap:16px;align-items:center;text-align:left;width:100%;background:none;border:0;border-bottom:1px solid var(--line);padding:19px 14px;border-left:3px solid transparent;color:inherit;transition:background-color .25s,border-color .25s}
+.sk:hover{background:var(--paper2)}
+.sk.active{background:var(--paper2);border-left-color:var(--acc)}
+.sk .id{font-family:var(--mono);font-size:10px;color:var(--mut);letter-spacing:.06em}
+.sk.active .id{color:var(--acc)}
+.sk .nm{font-weight:600;font-size:1rem;line-height:1.3}
+.sk .nm small{display:block;font-weight:400;color:var(--mut);font-size:.82rem;margin-top:2px}
+.sk .tag{font-family:var(--mono);font-size:9px;letter-spacing:.12em;border:1px solid var(--line2);border-radius:99px;padding:4px 10px;color:var(--mut);white-space:nowrap}
+.sk-panel{background:var(--dark);color:var(--cream);border-radius:16px;padding:34px 32px;position:sticky;top:96px;min-height:340px}
+.sk-panel .pin{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.sk-panel .pid{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:#D9A06B}
+.sk-panel .phint{font-family:var(--hand);font-size:1.2rem;color:rgba(241,234,219,.45);transform:rotate(-1.5deg)}
+.sk-panel h3{font-family:var(--disp);font-weight:600;font-size:1.7rem;line-height:1.2;margin-bottom:14px}
+.sk-panel .pd{color:rgba(241,234,219,.82);font-size:1.02rem;line-height:1.8;margin-bottom:22px}
+.sk-panel .pk{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:rgba(241,234,219,.5);display:block;margin-bottom:8px;text-transform:uppercase}
+.sk-panel .pwhere{font-weight:600;font-size:.98rem;margin-bottom:20px}
+.pchips{display:flex;flex-wrap:wrap;gap:8px}
+.pchips span{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;border:1px solid rgba(241,234,219,.3);border-radius:99px;padding:5px 12px;color:rgba(241,234,219,.75)}
+.sk-panel .swap{animation:swap .4s ease both}
+@keyframes swap{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(max-width:920px){.sk-wrap{grid-template-columns:1fr}.sk-panel{position:static;min-height:0}}
+
+/* ---------- experience (dark break) ---------- */
+#experience{background:var(--dark);color:var(--cream)}
+#experience .kick{color:rgba(241,234,219,.5)}
+#experience h2 em{color:#D9A06B}
+.tl{margin-top:54px;border-left:1px solid rgba(241,234,219,.18);padding-left:36px;display:grid;gap:52px}
+.tl-item{position:relative}
+.tl-item::before{content:'';position:absolute;left:-41px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 5px var(--dark);transition:background-color .6s}
+.tl-item:first-child::before{background:#D9A06B}
+.tl-meta{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:rgba(241,234,219,.5);display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:10px;text-transform:uppercase}
+.tl-meta b{color:#D9A06B;font-weight:500}
+.tl-item h3{font-family:var(--disp);font-weight:600;font-size:1.65rem;line-height:1.2}
+.tl-item .org{font-size:1rem;color:#D9A06B;font-weight:600;margin:5px 0 12px}
+.tl-item p{color:rgba(241,234,219,.78);max-width:680px}
+.tl-item ul{list-style:none;margin-top:14px;max-width:680px}
+.tl-item li{padding-left:22px;position:relative;color:rgba(241,234,219,.72);font-size:.95rem;margin:6px 0}
+.tl-item li::before{content:'—';position:absolute;left:0;color:#D9A06B}
+
+/* ---------- lifecycle dial ---------- */
+#lifecycle .range-wrap{margin:56px 0 12px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:99px;outline:none;cursor:ew-resize;
+  background:linear-gradient(90deg,var(--slate) 0 20%,var(--clay) 20% 40%,var(--sage) 40% 60%,var(--ochre) 60% 80%,var(--rose) 80% 100%)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--paper);border:3px solid var(--ink);cursor:grab;box-shadow:0 3px 8px rgba(37,33,26,.25)}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--paper);border:3px solid var(--ink);cursor:grab}
+input[type=range]::-moz-range-track{height:8px;border-radius:99px;background:linear-gradient(90deg,var(--slate) 0 20%,var(--clay) 20% 40%,var(--sage) 40% 60%,var(--ochre) 60% 80%,var(--rose) 80% 100%)}
+.phasebox{margin:44px 0 24px;background:var(--paper2);border:1px solid var(--line);border-radius:16px;padding:30px 32px}
+.ph-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+#ph-idx{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--phc,var(--clay))}
+#ph-name{font-family:var(--disp);font-weight:600;font-size:clamp(1.4rem,2.8vw,2.1rem);line-height:1.1}
+#ph-desc{color:var(--mut);max-width:760px;margin-top:10px;font-size:.99rem}
+.phases{display:flex;justify-content:space-between;gap:8px;margin:14px 0 36px;flex-wrap:wrap}
+.phases button{background:none;border:0;border-bottom:2px solid transparent;color:var(--mut);font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;padding:6px 2px;transition:color .25s,border-color .25s}
+.phases button:hover{color:var(--ink)}
+.phases button.on{color:var(--ink);border-color:var(--phc,var(--clay))}
+#std-list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.std{display:grid;grid-template-columns:56px 1fr 200px;gap:26px;align-items:center;padding:22px 16px;border-bottom:1px solid var(--line);transition:opacity .3s}
+.std .rank{font-family:var(--disp);font-size:1.5rem;font-weight:600;color:#C9BEA6;transition:color .4s}
+.std.top .rank{color:var(--phc,var(--clay))}
+.std h4{font-size:1.1rem;font-weight:700;line-height:1.3}
+.std .g{color:var(--mut);font-size:.9rem;margin-top:3px;line-height:1.6}
+.std .bar{height:5px;background:var(--paper3);border-radius:99px;overflow:hidden}
+.std .bar i{display:block;height:100%;width:0;background:var(--phc,var(--clay));border-radius:99px;transition:width .45s cubic-bezier(.2,.8,.2,1),background-color .4s}
+.std .sc{font-family:var(--mono);font-size:9px;color:var(--mut);letter-spacing:.12em;margin-top:8px;display:block;text-align:right}
+@media(max-width:700px){.std{grid-template-columns:44px 1fr;row-gap:10px}.std>div:last-child{grid-column:2}}
+
+/* ---------- essays ---------- */
+#essays{background:var(--paper2)}
+.essay{border-top:1px solid var(--line2)}
+.essay:last-child{border-bottom:1px solid var(--line2)}
+.e-head{width:100%;display:grid;grid-template-columns:70px 1fr auto 30px;gap:22px;align-items:center;padding:30px 8px;background:none;border:0;text-align:left;color:inherit;transition:padding-left .3s}
+.e-head:hover{padding-left:20px}
+.e-idx{font-family:var(--mono);font-size:11px;color:var(--mut);letter-spacing:.1em}
+.e-head h3{font-family:var(--disp);font-weight:600;font-size:clamp(1.2rem,2.4vw,1.7rem);line-height:1.25}
+.e-head .meta{font-family:var(--mono);font-size:9.5px;color:var(--mut);letter-spacing:.12em;text-align:right;line-height:2;white-space:nowrap}
+.e-x{position:relative;width:15px;height:15px;justify-self:end}
+.e-x::before,.e-x::after{content:'';position:absolute;background:var(--ink);transition:transform .35s}
+.e-x::before{left:0;top:7px;width:15px;height:1.5px}
+.e-x::after{left:7px;top:0;width:1.5px;height:15px}
+.essay.open .e-x::after{transform:scaleY(0)}
+.e-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s cubic-bezier(.3,.8,.2,1)}
+.essay.open .e-body{grid-template-rows:1fr}
+.e-body>div{overflow:hidden}
+.e-in{display:grid;grid-template-columns:1fr 280px;gap:50px;padding:8px 8px 40px}
+.e-text p{margin-bottom:19px;font-size:1.04rem;line-height:1.85}
+.e-text p.lead{font-size:1.18rem;font-family:var(--disp);font-weight:500;line-height:1.6;color:var(--ink)}
+.rp{position:sticky;top:96px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px}
+.rp .k{font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:var(--mut);display:block;margin-bottom:14px;text-transform:uppercase}
+.rp .pct{font-family:var(--disp);font-weight:600;font-size:2.4rem;line-height:1}
+.rp .pct small{font-size:1rem;color:var(--mut);font-weight:400}
+.rp .bar{height:5px;background:var(--paper3);border-radius:99px;margin:14px 0 16px;overflow:hidden}
+.rp .bar i{display:block;height:100%;width:0;background:var(--acc);border-radius:99px;transition:width .25s,background-color .6s}
+.rp .done-msg{display:none;font-family:var(--hand);font-size:1.35rem;color:var(--sage);transform:rotate(-2deg);line-height:1.3}
+.rp.done .done-msg{display:block;animation:swap .5s ease both}
+@media(max-width:880px){.e-in{grid-template-columns:1fr}.rp{position:static}.e-head{grid-template-columns:48px 1fr 24px}.e-head .meta{display:none}}
+
+/* ---------- contact ---------- */
+.me-chip{display:flex;align-items:center;gap:16px;margin-bottom:26px}
+.me-chip img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:50% 30%;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--paper3)}
+.me-chip .mc-txt{font-family:var(--hand);font-size:1.35rem;color:var(--clay);transform:rotate(-1.5deg);line-height:1.25}
+.me-chip .mc-txt small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--mut);margin-top:4px;transform:none}
+.c-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;margin-top:30px;align-items:start}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.field{margin-bottom:24px}
+.field label{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;color:var(--mut);margin-bottom:9px;text-transform:uppercase}
+.field input,.field textarea{width:100%;background:transparent;border:0;border-bottom:1.5px solid var(--line2);color:var(--ink);font-family:var(--body);font-size:1.02rem;padding:10px 2px;transition:border-color .25s;resize:vertical}
+.field input:focus,.field textarea:focus{outline:none;border-bottom-color:var(--acc)}
+.cacts{border-top:1px solid var(--line)}
+.cacts>*{display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;padding:21px 6px;border:0;border-bottom:1px solid var(--line);background:none;color:var(--ink);font-size:1.02rem;font-weight:600;text-decoration:none;text-align:left;transition:color .2s,padding-left .3s}
+.cacts>*:hover{color:var(--acc);padding-left:16px}
+.cacts .sm{font-family:var(--mono);font-size:9px;color:var(--mut);letter-spacing:.1em;display:block;margin-top:4px;font-weight:400}
+.cacts .arr{font-family:var(--mono);font-weight:400;font-size:1rem}
+.cnote{margin-top:24px;font-family:var(--mono);font-size:10px;color:var(--mut);letter-spacing:.05em;line-height:2}
+@media(max-width:880px){.c-grid{grid-template-columns:1fr;gap:44px}}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:40px 0 50px;background:var(--paper2)}
+.ft{display:flex;flex-wrap:wrap;gap:18px 50px;justify-content:space-between;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--mut);line-height:1.9}
+.ft b{color:var(--ink);font-weight:500}
+.ft .hand{font-family:var(--hand);font-size:1.25rem;letter-spacing:0;color:var(--clay)}
+
+/* ---------- toasts ---------- */
+#toasts{position:fixed;bottom:22px;right:22px;z-index:1300;display:flex;flex-direction:column;gap:10px;max-width:min(360px,86vw)}
+.toast{background:#2A2620;color:var(--cream);border-left:3px solid var(--sage);padding:13px 18px;font-family:var(--mono);font-size:11px;line-height:1.6;letter-spacing:.03em;border-radius:8px;animation:tin .35s cubic-bezier(.2,.9,.3,1) both;box-shadow:0 12px 30px rgba(37,33,26,.3)}
+.toast.err{border-left-color:var(--clay)}
+.toast.out{opacity:0;transform:translateX(24px);transition:.3s}
+@keyframes tin{from{opacity:0;transform:translateX(24px)}}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div id="pbar" aria-hidden="true"></div>
+
+<header>
+  <div class="h-in">
+    <a class="logo" href="#hero">Shreevarnika <em>Nagammal</em></a>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#lifecycle">Standards</a>
+      <a href="#essays">Writing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="openpill" title="Open to CSV / QA / validation roles"><span class="dot"></span><span class="txt">OPEN TO WORK</span></span>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section id="hero">
+  <div class="wrap">
+    <div class="h-grid">
+      <div>
+        <span class="h-hello">Hello, I'm glad you're here —</span>
+        <h1>
+          <span class="ln">Shreevarnika</span>
+          <span class="ln"><em>Nagammal</em></span>
+        </h1>
+        <p class="h-role">I make sure the software behind <b>medical devices</b> is safe enough to trust — and documented well enough to <b>prove it</b>.</p>
+        <div class="h-chips">
+          <span>Software Engineer · <b>Computerized System Validation</b></span>
+          <span><b>Capgemini</b> · Pune</span>
+          <span>Clients: <b>Smith+Nephew &amp; Olympus</b> (Medical Devices)</span>
+        </div>
+        <div class="h-cta">
+          <a class="btn primary" href="#skills">Explore my skills
+            <svg viewBox="0 0 24 24"><path d="M12 5v14m0 0l-6-6m6 6l6-6"/></svg></a>
+          <a class="btn" href="#contact">Say hello
+            <svg viewBox="0 0 24 24"><path d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <div class="frame">
+          <!-- HER PHOTO — loads straight from the GitHub repo.
+               If it ever can't load, the "SN" monogram shows instead. -->
+          <img src="https://raw.githubusercontent.com/PAWARSAHIL07/REUME.VARNIKA/main/photo_6212834279054578345_y.jpg"
+               alt="Portrait of Shreevarnika Nagammal"
+               loading="eager"
+               onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20720%20900%27%3E%3Crect%20width=%27720%27%20height=%27900%27%20fill=%27%232A2620%27/%3E%3Ctext%20x=%27360%27%20y=%27475%27%20font-family=%27Georgia,serif%27%20font-size=%27170%27%20font-style=%27italic%27%20fill=%27%23F1EADB%27%20text-anchor=%27middle%27%3ESN%3C/text%3E%3C/svg%3E'">
+        </div>
+        <figcaption class="cap">Biomedical engineer by degree, <b>validation engineer</b> by choice — Chennai-born, Pune-based.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="wrap ecg" style="position:relative">
+    <span class="lbl">BIOMEDICAL AT HEART</span>
+    <svg viewBox="0 0 1500 80" preserveAspectRatio="none" aria-hidden="true">
+      <path class="base" id="ecg-base" d=""/>
+      <path class="live" id="ecg-live" d=""/>
+    </svg>
+  </div>
+
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact"><span class="k">Education</span><span class="v">B.Tech, Biomedical Engineering<small>SRM University</small></span></div>
+      <div class="fact"><span class="k">Currently</span><span class="v">Software Engineer<small>Capgemini · Full-time · Pune</small></span></div>
+      <div class="fact"><span class="k">Clients</span><span class="v">Smith+Nephew &amp; Olympus<small>Medical devices · via Capgemini</small></span></div>
+      <div class="fact"><span class="k">Standards I live by</span><span class="v">GAMP 5 · 21 CFR Part 11<small>ISO 13485 · ISO 14971</small></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="kick">About me</div>
+    <h2 class="rev">Healthcare taught me care.<br>Engineering taught me <em>rigour.</em> I do both.</h2>
+    <div class="a-grid">
+      <div class="a-text rev">
+        <div class="drop">"Software should never be a risk factor in someone's surgery. That one sentence explains almost everything I do."</div>
+        <p>I'm a Software Engineer at <b>Capgemini</b>, specializing in <b>Computerized System Validation, software testing and life-sciences compliance</b> — with a B.Tech in Biomedical Engineering from SRM University underneath it all. I work across the <b>Smith+Nephew</b> and <b>Olympus</b> medical-device accounts from Capgemini's Pune campus, inside fully regulated environments where every click leaves an audit trail and every "it works" needs evidence attached.</p>
+        <p>My days move between requirement analysis, risk assessment, validation planning, test execution and documentation — sitting between engineers who want to ship and regulators who need proof, translating in both directions. The standards that shape my work: <b>21 CFR Part 11, GAMP 5, ISO 13485 and ISO 14971</b> — and as a certified <b>Six Sigma Green Belt</b>, I bring DMAIC thinking to how quality gets built in, not just inspected in.</p>
+        <p>Before Capgemini, compliance wasn't abstract to me. At <b>Bloom Life Hospital</b> I calibrated real equipment and learned what documentation means when patients are downstream. At <b>Sanmina</b> I saw process validation and quality systems govern a manufacturing floor. Hospital ward, factory line, software suite — I've seen the continuum from three sides, and that's exactly the engineer I want to be.</p>
+        <div class="principles">
+          <div class="pr"><span class="no">01</span><span><b>Document it like you'll be audited — because you will.</b><small>Good records aren't overhead; in regulated software they are the product.</small></span></div>
+          <div class="pr"><span class="no">02</span><span><b>Risk decides depth, not habit.</b><small>Finite testing effort belongs where harm lives — that's ISO 14971 thinking.</small></span></div>
+          <div class="pr"><span class="no">03</span><span><b>Translate both ways.</b><small>Clinician to code, code to compliance. The gap is where projects fail.</small></span></div>
+        </div>
+      </div>
+      <aside class="qcard rev">
+        <span class="k">Quick facts</span>
+        <div class="row"><span>Degree</span><b>B.Tech Biomedical Engg.</b></div>
+        <div class="row"><span>University</span><b>SRM University</b></div>
+        <div class="row"><span>Employer</span><b>Capgemini · Full-time</b></div>
+        <div class="row"><span>Clients</span><b>Smith+Nephew · Olympus</b></div>
+        <div class="row"><span>Certification</span><b>Six Sigma Green Belt</b></div>
+        <div class="row"><span>Based in</span><b>Pune, Maharashtra</b></div>
+        <div class="row"><span>Internships</span><b>Hospital + Manufacturing</b></div>
+        <div class="row"><span>Open to</span><b>CSV · QA · Validation roles</b></div>
+        <p class="note">New to Pune — still hunting for the best filter coffee. Recommendations welcome.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <div class="wrap">
+    <div class="kick">Skills — selectable</div>
+    <h2 class="rev">Pick a skill.<br><em>I'll tell you where I've used it.</em></h2>
+    <p class="lead-in rev">No keyword soup here. Every skill below is real, filtered by category, and each one opens a short, honest note about where it actually appeared in my work.</p>
+
+    <div class="filters rev" id="chips"></div>
+    <div class="count" id="skcount"></div>
+    <div class="sk-wrap rev">
+      <div id="sk-list"></div>
+      <div class="sk-panel" id="sk-panel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="kick">Experience</div>
+    <h2 class="rev">The path so far — <em>hospital, factory, code.</em></h2>
+    <div class="tl">
+      <div class="tl-item rev">
+        <div class="tl-meta"><b>Current · Full-time</b><span>Pune, India</span></div>
+        <h3>Software Engineer</h3>
+        <div class="org">Capgemini — Smith+Nephew &amp; Olympus accounts</div>
+        <p>Validation and analysis within regulated environments on the Smith+Nephew and Olympus medical-device accounts, working out of Capgemini's Pune campus.</p>
+        <ul>
+          <li>Requirement analysis &amp; traceability in a GAMP 5 / 21 CFR Part 11 environment</li>
+          <li>Risk assessment &amp; validation documentation aligned to ISO 13485 / ISO 14971</li>
+          <li>Manual test design &amp; execution — including robotics system testing</li>
+          <li>Defect management and cross-functional collaboration across QA, regulatory and engineering</li>
+          <li>Six Sigma Green Belt — DMAIC-driven process improvement on quality workflows</li>
+        </ul>
+      </div>
+      <div class="tl-item rev">
+        <div class="tl-meta"><b>Internship</b><span>Hospital environment</span></div>
+        <h3>Biomedical Internship</h3>
+        <div class="org">Bloom Life Hospital</div>
+        <p>Hands-on exposure to biomedical systems, equipment calibration and healthcare regulatory documentation — and the discovery that a hospital is the least forgiving production environment in the world.</p>
+      </div>
+      <div class="tl-item rev">
+        <div class="tl-meta"><b>Internship</b><span>Manufacturing environment</span></div>
+        <h3>Process Validation Internship</h3>
+        <div class="org">Sanmina</div>
+        <p>Process validation, quality systems and regulatory documentation in electronics manufacturing — where compliance stopped being a document and became a way of working.</p>
+      </div>
+      <div class="tl-item rev">
+        <div class="tl-meta"><b>Education</b><span>B.Tech · 4 years</span></div>
+        <h3>B.Tech, Biomedical Engineering</h3>
+        <div class="org">SRM University</div>
+        <p>Anatomy on Monday, signal processing by Friday — the degree that lets me read both a clinician's workflow and an engineer's architecture without a translator.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LIFECYCLE DIAL ================= -->
+<section id="lifecycle">
+  <div class="wrap">
+    <div class="kick">Standards, interactive</div>
+    <h2 class="rev">Drag through a device's life.<br><em>Watch what takes over.</em></h2>
+    <p class="lead-in rev">Every standard I work with matters at a different moment in a medical device's lifecycle. Drag the slider — the list re-ranks in real time by where each one matters most, and where I've applied them.</p>
+
+    <div class="phasebox rev">
+      <div class="ph-head"><span id="ph-idx">PHASE 03</span><span id="ph-name">Verification &amp; Validation</span></div>
+      <p id="ph-desc"></p>
+    </div>
+    <div class="range-wrap rev">
+      <input type="range" id="dial" min="0" max="100" value="45" aria-label="Device lifecycle phase">
+    </div>
+    <div class="phases" id="phaseBtns"></div>
+    <div id="std-list" class="rev"></div>
+  </div>
+</section>
+
+<!-- ================= ESSAYS ================= -->
+<section id="essays">
+  <div class="wrap">
+    <div class="kick">Writing — deeper dives</div>
+    <h2 class="rev">Some things deserve<br><em>more than a bullet point.</em></h2>
+    <p class="lead-in rev">Short essays written the way I work. Open one — a gentle progress tracker keeps you company, and there's a small thank-you waiting at the end.</p>
+
+    <div style="margin-top:44px" class="rev">
+
+      <article class="essay">
+        <button class="e-head" aria-expanded="false">
+          <span class="e-idx">01</span>
+          <h3>What validating surgical robotics taught me about patience</h3>
+          <span class="meta">21 CFR PART 11 · GAMP 5<br>3 MIN READ</span>
+          <span class="e-x"></span>
+        </button>
+        <div class="e-body"><div><div class="e-in">
+          <div class="e-text">
+            <p class="lead">When the software you're testing ends up in an operating theatre, "it works on my machine" stops being a joke. On the Smith+Nephew and Olympus accounts, I help validate computerized systems that support surgical technology — and the first thing I unlearned was treating testing as a phase. Here, it's closer to a legal act.</p>
+            <p>Every test I execute is scripted, evidenced and traceable. A requirement walks forward into a risk, the risk into a test case, the test case into a result, the result into a signed summary — and the whole chain has to survive an auditor reading it backwards. That's what 21 CFR Part 11 really means in practice: the electronic record is as real as the product itself.</p>
+            <p>People sometimes imagine medical-device testing is slow because regulators enjoy paperwork. It's slow because patients can't file defect tickets. Somewhere along the way I stopped fighting that pace and started respecting it — slow is smooth, and smooth is fast. Patience, it turns out, was a job skill all along.</p>
+          </div>
+          <aside class="rp">
+            <span class="k">Your reading progress</span>
+            <div class="pct"><span class="pv">0</span><small>%</small></div>
+            <div class="bar"><i></i></div>
+            <div class="done-msg">You finished it — thank you for reading.</div>
+          </aside>
+        </div></div></div>
+      </article>
+
+      <article class="essay">
+        <button class="e-head" aria-expanded="false">
+          <span class="e-idx">02</span>
+          <h3>Risk first, coverage second — how ISO 14971 changed how I test</h3>
+          <span class="meta">ISO 14971 · RISK · STRATEGY<br>3 MIN READ</span>
+          <span class="e-x"></span>
+        </button>
+        <div class="e-body"><div><div class="e-in">
+          <div class="e-text">
+            <p class="lead">Most test plans start by asking "what should we test?". In medical devices, the question is "what could hurt someone, and how much proof do we need that it won't?". ISO 14971 flips testing from coverage-driven to risk-driven — and once that clicks, there's no going back.</p>
+            <p>In practice: every hazard gets a severity, a probability, and a detection question. A failure that could reach a patient earns deeper verification than a cosmetic glitch on a screen nobody looks at. When I write a validation plan now, the risk file should read like a preview of what I'm about to test. If it doesn't, the plan is wrong — and I'd rather find that out myself than have an auditor find it for me.</p>
+            <p>The uncomfortable truth I've made peace with: "we tested everything" is not an answer anyone should accept, including me. Finite effort belongs where harm lives. Arguing with your own test plan isn't self-doubt — it's the job.</p>
+          </div>
+          <aside class="rp">
+            <span class="k">Your reading progress</span>
+            <div class="pct"><span class="pv">0</span><small>%</small></div>
+            <div class="bar"><i></i></div>
+            <div class="done-msg">You finished it — thank you for reading.</div>
+          </aside>
+        </div></div></div>
+      </article>
+
+      <article class="essay">
+        <button class="e-head" aria-expanded="false">
+          <span class="e-idx">03</span>
+          <h3>From the hospital bench to the validation desk — my unfair advantage</h3>
+          <span class="meta">BIOMEDICAL · CAREER<br>3 MIN READ</span>
+          <span class="e-x"></span>
+        </button>
+        <div class="e-body"><div><div class="e-in">
+          <div class="e-text">
+            <p class="lead">I didn't enter software the usual way. My B.Tech is in Biomedical Engineering from SRM University, and my first exposure to regulated work was physical — calibrating equipment at Bloom Life Hospital, reading healthcare regulatory documentation that had real consequences on real wards.</p>
+            <p>The second exposure was industrial: Sanmina, where process validation and quality systems governed the manufacturing floor. Between the two, I saw compliance as a continuum — from the hospital bed back through the factory line to the software that controls both. Most engineers meet that continuum at one point. I've touched it at three.</p>
+            <p>That's why validation suits me. When a requirement mentions a clinical workflow, I can picture the clinician. When a risk assessment says "use error", I remember the calibration bench. Being fluent on both sides of that conversation isn't a nice-to-have in this field — I'd argue it's the whole point.</p>
+          </div>
+          <aside class="rp">
+            <span class="k">Your reading progress</span>
+            <div class="pct"><span class="pv">0</span><small>%</small></div>
+            <div class="bar"><i></i></div>
+            <div class="done-msg">You finished it — thank you for reading.</div>
+          </aside>
+        </div></div></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap">
+    <div class="kick">Get in touch</div>
+    <h2 class="rev">Let's talk about <em>your</em> regulated release.</h2>
+    <p class="lead-in rev">Whether it's a role, a question about validation, or just a conversation about life-sciences quality — my inbox is open and my replies are quick.</p>
+    <div class="c-grid">
+      <form id="cform" novalidate>
+        <div class="frow">
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" type="text" data-pitch='["Your name","What should I call you?","A name, any name"]'>
+          </div>
+          <div class="field">
+            <label for="f-mail">Your email</label>
+            <input id="f-mail" type="email" data-pitch='["you@company.com","Where can I reply?","your.email@work.com"]'>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-msg">Your message</label>
+          <textarea id="f-msg" rows="4" data-pitch='["Tell me about the role…","Ask me anything about validation…","What does CSV actually involve? Ask.","Where do you need compliance to be an advantage?"]'></textarea>
+        </div>
+        <button type="submit" class="btn primary">Send message — opens your mail app
+          <svg viewBox="0 0 24 24"><path d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></button>
+        <p class="cnote">NO SERVERS, NO TRACKING — YOUR MESSAGE IS DRAFTED LOCALLY AND SENT FROM YOUR OWN MAIL CLIENT.</p>
+      </form>
+      <div>
+        <div class="me-chip">
+          <img src="https://raw.githubusercontent.com/PAWARSAHIL07/REUME.VARNIKA/main/photo_6212834279054578345_y.jpg"
+               alt="Shreevarnika Nagammal"
+               loading="lazy"
+               onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20200%20200%27%3E%3Crect%20width=%27200%27%20height=%27200%27%20fill=%27%232A2620%27/%3E%3Ctext%20x=%27100%27%20y=%27125%27%20font-family=%27Georgia,serif%27%20font-size=%2760%27%20font-style=%27italic%27%20fill=%27%23F1EADB%27%20text-anchor=%27middle%27%3ESN%3C/text%3E%3C/svg%3E'">
+          <span class="mc-txt">That's me — I'd love to hear from you.
+            <small>PUT A FACE TO THE NAME</small></span>
+        </div>
+        <div class="cacts">
+          <a href="#" id="lnk" target="_blank" rel="noopener">LinkedIn profile
+            <span class="sm">500+ CONNECTIONS · VERIFIED PROFILE</span><span class="arr">↗</span></a>
+          <button id="cvbtn" type="button">Download CV
+            <span class="sm">PLAIN TEXT · ATS-FRIENDLY · GENERATED LIVE</span><span class="arr">↓</span></button>
+          <button id="copybtn" type="button">Copy my email address
+            <span class="sm" id="mailro">—</span><span class="arr">⧉</span></button>
+        </div>
+        <p class="cnote">RESPONSE TIME: USUALLY UNDER 24 HOURS.<br>
+        OPEN TO: CSV · QA / VALIDATION · LIFE-SCIENCES TESTING ROLES.<br>
+        RELOCATION-READY WITHIN INDIA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap ft">
+    <span><b>SHREEVARIKA NAGAMMAL</b><br>PUNE · INDIA · <span id="yr"></span></span>
+    <span>SOFTWARE ENGINEER — COMPUTERIZED SYSTEM VALIDATION<br>LIFE-SCIENCES COMPLIANCE</span>
+    <span class="hand">Designed &amp; built by hand — like all good evidence.</span>
+  </div>
+</footer>
+
+<div id="toasts" aria-live="polite"></div>
+
+<script>
+/* ================================================================
+   ✅ CONTACT DETAILS (already set)
+================================================================ */
+const EMAIL    = 'shreevarnika.n@gmail.com';
+const LINKEDIN = 'https://www.linkedin.com/in/shreevarnika-nagammal-398502228';
+
+const CLAY='#C1502E', SAGE='#5E7A54', OCHRE='#B08429', SLATE='#47698C', ROSE='#A4566B';
+const $  = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+document.getElementById('yr').textContent = new Date().getFullYear();
+ $('#lnk').href = LINKEDIN;
+ $('#mailro').textContent = EMAIL.toUpperCase();
+
+/* ---------- toasts ---------- */
+function toast(msg, err){
+  const t = document.createElement('div');
+  t.className = 'toast' + (err ? ' err' : '');
+  t.textContent = msg;
+  $('#toasts').appendChild(t);
+  setTimeout(()=>{ t.classList.add('out'); setTimeout(()=>t.remove(), 320); }, 3400);
+}
+
+/* ---------- FLIP helper (300ms shuffle) ---------- */
+function flip(els, mutate){
+  const first = new Map();
+  els.forEach(el => { if (el.style.display !== 'none') first.set(el, el.getBoundingClientRect()); });
+  mutate();
+  els.forEach(el => {
+    const f = first.get(el);
+    if (!f || el.style.display === 'none') return;
+    const l = el.getBoundingClientRect();
+    const dx = f.left - l.left, dy = f.top - l.top;
+    if (!dx && !dy) return;
+    el.style.transition = 'none';
+    el.style.transform = `translate(${dx}px,${dy}px)`;
+    requestAnimationFrame(() => {
+      el.style.transition = 'transform 300ms cubic-bezier(.25,.9,.3,1)';
+      el.style.transform  = 'translate(0,0)';
+    });
+  });
+}
+
+/* ---------- ECG divider ---------- */
+(function(){
+  const beat = x => ` L${x+92} 40 L${x+106} 33 L${x+120} 40 L${x+168} 40 L${x+176} 47 L${x+184} 8 L${x+192} 60 L${x+200} 40 L${x+226} 40 L${x+238} 31 L${x+250} 40 L${x+300} 40`;
+  let d = 'M0 40';
+  for (let i = 0; i < 6; i++) d += beat(i * 300);
+  $('#ecg-base').setAttribute('d', d);
+  $('#ecg-live').setAttribute('d', d);
+})();
+
+/* ---------- reveal on scroll ---------- */
+const revIO = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting){ e.target.classList.add('vis'); revIO.unobserve(e.target); }
+}), { threshold: 0.12 });
+ $$('.rev').forEach(el => revIO.observe(el));
+
+/* ---------- scroll: progress bar + accent shifts + active nav ---------- */
+const ACCENTS = { hero:CLAY, about:SAGE, skills:OCHRE, experience:'#D9A06B', lifecycle:SLATE, essays:ROSE, contact:CLAY };
+const secIO = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  document.documentElement.style.setProperty('--acc', ACCENTS[e.target.id] || CLAY);
+  $$('#nav a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+}), { rootMargin: '-40% 0px -55% 0px' });
+Object.keys(ACCENTS).forEach(id => secIO.observe(document.getElementById(id)));
+
+window.addEventListener('scroll', () => {
+  const p = Math.min(100, Math.max(0, window.scrollY / (document.documentElement.scrollHeight - innerHeight) * 100));
+  $('#pbar').style.width = p + '%';
+  updateReading();
+}, { passive: true });
+
+/* ---------- selectable skills ---------- */
+const CATS = { val:'Validation', test:'Testing & QA', std:'Standards', bio:'Foundation' };
+const SKILLS = [
+  { id:'01', n:'Computerized System Validation', s:'End-to-end CSV', cat:'val', tag:'CORE',
+    d:'The heart of what I do. I plan, execute and document validation for computerized systems in regulated medical-device environments — so every "it works" comes with evidence attached.',
+    w:'Capgemini · Smith+Nephew · Olympus', ch:['GAMP 5','21 CFR Part 11','IQ/OQ/PQ'] },
+  { id:'02', n:'Validation Planning & Documentation', s:'Protocols, matrices, reports', cat:'val', tag:'CORE',
+    d:'Good validation documentation reads like a story an auditor can follow backwards. I write protocols, maintain traceability matrices, and close everything out with summary reports that hold up under review.',
+    w:'Capgemini', ch:['GAMP 5','Traceability','Part 11'] },
+  { id:'03', n:'Requirement Analysis', s:'URS/FS into testable statements', cat:'val', tag:'CORE',
+    d:'I sit with requirement documents until every sentence is unambiguous and testable — because a vague requirement today is an audit finding tomorrow.',
+    w:'Capgemini · Bloom Life Hospital', ch:['GAMP 5','ISO 13485'] },
+  { id:'04', n:'Manual Testing & Test Case Design', s:'Evidence-grade test scripts', cat:'test', tag:'HANDS-ON',
+    d:'I design scripted test cases that double as evidence: precise steps, expected results, and nothing left to guess. If it isn\'t written down, it didn\'t happen.',
+    w:'Capgemini', ch:['GAMP 5','Part 11'] },
+  { id:'05', n:'Robotics System Testing', s:'Surgical robotics verification', cat:'test', tag:'SPECIALIST',
+    d:'On the Smith+Nephew and Olympus accounts I verify software that supports surgical technology — a place where "almost right" simply isn\'t a category that exists.',
+    w:'Capgemini · Smith+Nephew · Olympus', ch:['ISO 13485','ISO 14971'] },
+  { id:'06', n:'Defect Management & QA', s:'Log, triage, retest, close', cat:'test', tag:'HANDS-ON',
+    d:'A defect isn\'t closed until the record is closed. I log, triage, retest and document with the audit trail in mind from the very first entry.',
+    w:'Capgemini', ch:['Part 11','GAMP 5'] },
+  { id:'07', n:'Six Sigma Green Belt', s:'DMAIC · Certified', cat:'test', tag:'CERTIFIED',
+    d:'Certified Green Belt. DMAIC — define, measure, analyze, improve, control — is how I approach process quality: find the root cause, fix it, and put controls in place so the defect never comes back. It pairs naturally with validation: both are about engineering quality in, not inspecting it in afterwards.',
+    w:'Capgemini', ch:['DMAIC','Root-cause analysis','Process improvement'] },
+  { id:'08', n:'GAMP 5', s:'Risk-based validation lifecycle', cat:'std', tag:'STANDARD',
+    d:'My operating framework — risk-based decisions about how much validation a system deserves, applied consistently across the whole lifecycle.',
+    w:'Capgemini · Smith+Nephew · Olympus', ch:['CSV','IQ/OQ/PQ'] },
+  { id:'09', n:'21 CFR Part 11', s:'Electronic records & signatures', cat:'std', tag:'STANDARD',
+    d:'The FDA rules that make an audit trail more than paperwork. Done right, the electronic record is the product — and I treat it that way.',
+    w:'Capgemini · Smith+Nephew · Olympus', ch:['CSV','Audit trail'] },
+  { id:'10', n:'ISO 13485 & ISO 14971', s:'QMS + device risk management', cat:'std', tag:'STANDARD',
+    d:'13485 tells me what good looks like for a device quality system; 14971 tells me where to look first. Between them, they shape nearly every test decision I make.',
+    w:'Capgemini · Smith+Nephew · Olympus', ch:['Risk assessment','QMS'] },
+  { id:'11', n:'Biomedical Systems & Calibration', s:'Where it all began', cat:'bio', tag:'ORIGIN',
+    d:'Calibrating real equipment at Bloom Life Hospital and learning what documentation means when patients are downstream — the experience everything else is built on.',
+    w:'Bloom Life Hospital', ch:['Calibration','Healthcare docs'] },
+  { id:'12', n:'Process Validation & Quality Systems', s:'The manufacturing floor view', cat:'bio', tag:'ORIGIN',
+    d:'Sanmina taught me that a compliant product and a compliant process are two different victories — and that quality systems scale from the hospital bed back to the factory line.',
+    w:'Sanmina', ch:['Process validation','Quality systems'] },
+  { id:'13', n:'Cross-Functional Collaboration', s:'QA · regulatory · engineering', cat:'bio', tag:'HUMAN',
+    d:'Validation lives between teams. I spend my days translating between engineers, QA and regulatory so that a release decision has everyone genuinely behind it.',
+    w:'Capgemini · Smith+Nephew · Olympus', ch:['Communication','Release decisions'] }
+];
+const skList = $('#sk-list'), skPanel = $('#sk-panel');
+SKILLS.forEach(s => {
+  const b = document.createElement('button');
+  b.type = 'button'; b.className = 'sk'; b.dataset.cat = s.cat; b.dataset.id = s.id;
+  b.innerHTML = `<span class="id">${s.id}</span><span class="nm">${s.n}<small>${s.s}</small></span><span class="tag">${s.tag}</span>`;
+  b.addEventListener('click', () => selectSkill(s.id));
+  skList.appendChild(b);
+});
+let activeSkill = null;
+function renderPanel(s){
+  skPanel.innerHTML = `<div class="swap">
+    <div class="pin"><span class="pid">SKILL ${s.id} / ${s.tag}</span><span class="phint">the honest version ↓</span></div>
+    <h3>${s.n}</h3>
+    <p class="pd">${s.d}</p>
+    <span class="pk">Where I've used it</span>
+    <p class="pwhere">${s.w}</p>
+    <span class="pk">Connects to</span>
+    <div class="pchips">${s.ch.map(c => `<span>${c}</span>`).join('')}</div>
+  </div>`;
+}
+function selectSkill(id){
+  activeSkill = id;
+  $$('.sk').forEach(b => b.classList.toggle('active', b.dataset.id === id));
+  renderPanel(SKILLS.find(s => s.id === id));
+}
+selectSkill('01');
+
+/* filters with FLIP shuffle */
+const chipsEl = $('#chips');
+[['all','All skills'], ...Object.entries(CATS)].forEach(([k, label], idx) => {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'chip' + (idx === 0 ? ' on' : '');
+  btn.textContent = `${label} (${k === 'all' ? SKILLS.length : SKILLS.filter(s => s.cat === k).length})`;
+  btn.addEventListener('click', () => {
+    $$('.chip').forEach(c => c.classList.remove('on')); btn.classList.add('on');
+    const rows = [...skList.children];
+    flip(rows, () => {
+      rows.forEach(r => {
+        const show = k === 'all' || r.dataset.cat === k;
+        if (show && r.style.display === 'none') r.style.animation = 'swap .4s ease both';
+        r.style.display = show ? '' : 'none';
+      });
+      $('#skcount').textContent = `SHOWING ${rows.filter(r => r.style.display !== 'none').length} OF ${SKILLS.length} SKILLS — ${k === 'all' ? 'EVERYTHING I BRING' : label.toUpperCase()}`;
+      const firstVisible = rows.find(r => r.style.display !== 'none');
+      if (firstVisible) selectSkill(firstVisible.dataset.id);
+    });
+  });
+  chipsEl.appendChild(btn);
+});
+ $('#skcount').textContent = `SHOWING ${SKILLS.length} OF ${SKILLS.length} SKILLS — EVERYTHING I BRING`;
+
+/* ---------- essays: accordion + reading progress ---------- */
+ $$('.essay').forEach(es => {
+  const head = es.querySelector('.e-head');
+  head.addEventListener('click', () => {
+    const open = es.classList.contains('open');
+    $$('.essay.open').forEach(o => { o.classList.remove('open'); o.querySelector('.e-head').setAttribute('aria-expanded','false'); });
+    if (!open){
+      es.classList.add('open');
+      head.setAttribute('aria-expanded','true');
+      setTimeout(updateReading, 600);
+    }
+  });
+});
+function updateReading(){
+  $$('.essay.open').forEach(es => {
+    const r = es.getBoundingClientRect();
+    const p = Math.min(1, Math.max(0, (innerHeight * 0.72 - r.top) / r.height));
+    const rp = es.querySelector('.rp');
+    rp.querySelector('.pv').textContent = Math.round(p * 100);
+    rp.querySelector('.bar i').style.width = (p * 100) + '%';
+    if (p >= 0.9) rp.classList.add('done');
+  });
+}
+
+/* ---------- lifecycle dial ---------- */
+const PHASES = [
+  { n:'Concept & Requirements', c:SLATE, d:'The device is still a drawing. But every requirement written today is a test case someone will owe evidence for tomorrow — this is where traceability quietly begins.' },
+  { n:'Risk Management', c:CLAY, d:'ISO 14971 runs the show: what could go wrong, how severely, how often — and what evidence makes the residual risk acceptable. The risk file becomes the skeleton of the whole test strategy.' },
+  { n:'Verification & Validation', c:SAGE, d:'The protocol becomes evidence. IQ/OQ/PQ, scripted execution, Part 11-compliant records, defect management with a complete audit trail. This is home turf — the part of the lifecycle I live in daily.' },
+  { n:'Manufacturing & Process', c:OCHRE, d:'Quality leaves the lab and hits the floor. Process validation and repeatable output at scale — Sanmina taught me that a compliant product and a compliant process are two different victories.' },
+  { n:'Post-Market & Surveillance', c:ROSE, d:'The device is live. Complaints, vigilance, CAPA, periodic reviews — the lifecycle loops, and compliance never clocks out. Field data flows back into risk files and the next generation of requirements.' }
+];
+const STDS = [
+  { n:'Traceability Matrix',       g:'Every requirement mapped forward to tests and backward to risk. My favourite spreadsheet on Earth.', rel:[5,4,5,3,3] },
+  { n:'ISO 14971',                 g:'Risk management for medical devices — the standard that decides how deep every test needs to go.', rel:[4,5,4,2,3] },
+  { n:'GAMP 5',                    g:'The risk-based framework for validating computerized systems in regulated life sciences.', rel:[4,3,5,2,2] },
+  { n:'21 CFR Part 11',            g:'FDA rules for electronic records and signatures — the audit trail is the product.', rel:[2,2,5,3,4] },
+  { n:'ISO 13485',                 g:'The quality management system for medical devices, from design inputs to delivery.', rel:[4,3,4,5,4] },
+  { n:'IQ · OQ · PQ',              g:'Installation, Operational and Performance Qualification — the three-gate evidence chain.', rel:[2,2,5,5,2] },
+  { n:'CAPA & Post-Market Vigilance', g:'Corrective and preventive action once the device is in the field — the lifecycle, looping.', rel:[1,2,2,4,5] }
+];
+const stdList = $('#std-list');
+STDS.forEach(() => {
+  const el = document.createElement('div');
+  el.className = 'std';
+  el.innerHTML = `<div class="rank"></div>
+    <div><h4></h4><p class="g"></p></div>
+    <div><div class="bar"><i></i></div><span class="sc"></span></div>`;
+  stdList.appendChild(el);
+});
+const phaseBtns = $('#phaseBtns');
+PHASES.forEach((p, i) => {
+  const b = document.createElement('button');
+  b.type = 'button'; b.textContent = '0' + (i+1) + ' · ' + p.n.toUpperCase();
+  b.style.setProperty('--phc', p.c);
+  b.addEventListener('click', () => { $('#dial').value = i * 20 + 10; renderDial(); });
+  phaseBtns.appendChild(b);
+});
+let dialIdx = 2, raf = false;
+function renderDial(){
+  const v = +$('#dial').value;
+  dialIdx = Math.min(4, Math.floor(v / 20));
+  const ph = PHASES[dialIdx];
+  document.documentElement.style.setProperty('--phc', ph.c);
+  $('#ph-idx').textContent = 'PHASE 0' + (dialIdx + 1);
+  $('#ph-name').textContent = ph.n;
+  $('#ph-desc').textContent = ph.d;
+  $$('#phaseBtns button').forEach((b, i) => b.classList.toggle('on', i === dialIdx));
+  const cards = [...stdList.children];
+  flip(cards, () => {
+    cards.forEach((c, i) => { c._s = STDS[i].rel[dialIdx]; c.dataset.s = c._s; });
+    const order = [...cards].sort((a, b) => b.dataset.s - a.dataset.s);
+    order.forEach((c, i) => {
+      const s = +c.dataset.s, data = STDS[cards.indexOf(c)];
+      c.style.order = i;
+      c.querySelector('.rank').textContent = '0' + (i + 1);
+      c.classList.toggle('top', i === 0 && s >= 4);
+      c.style.opacity = (0.45 + 0.55 * (s / 5)).toFixed(2);
+      c.querySelector('h4').textContent = data.n;
+      c.querySelector('.g').textContent = data.g;
+      c.querySelector('.bar i').style.width = (s / 5 * 100) + '%';
+      c.querySelector('.sc').textContent = 'RELEVANCE ' + s + ' / 5 · APPLIED AT CAPGEMINI';
+    });
+  });
+}
+ $('#dial').addEventListener('input', () => {
+  if (raf) return; raf = true;
+  requestAnimationFrame(() => { renderDial(); raf = false; });
+});
+renderDial();
+
+/* ---------- typewriter placeholders ---------- */
+ $$('[data-pitch]').forEach(inp => {
+  const arr = JSON.parse(inp.dataset.pitch); let i = 0;
+  function type(){
+    const w = arr[i]; let c = 0;
+    const t = setInterval(() => {
+      inp.setAttribute('placeholder', w.slice(0, ++c));
+      if (c >= w.length){ clearInterval(t); setTimeout(erase, 2100); }
+    }, 46);
+  }
+  function erase(){
+    const w = arr[i]; let c = w.length;
+    const t = setInterval(() => {
+      inp.setAttribute('placeholder', w.slice(0, --c));
+      if (c <= 0){ clearInterval(t); i = (i + 1) % arr.length; type(); }
+    }, 20);
+  }
+  type();
+});
+
+/* ---------- contact: mailto + copy + CV ---------- */
+ $('#cform').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = $('#f-name').value.trim(), mail = $('#f-mail').value.trim(), msg = $('#f-msg').value.trim();
+  if (!name || !mail || !msg){ toast('Almost there — all three fields need a little something first.', true); return; }
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)){ toast('That email doesn\'t look quite right — could you double-check it?', true); return; }
+  const subject = encodeURIComponent(`Hello from ${name} — via your portfolio`);
+  const body = encodeURIComponent(`${msg}\n\n— ${name} (${mail})`);
+  window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+  toast('Your mail app is opening with the message drafted — just hit send.');
+});
+ $('#copybtn').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(EMAIL); }
+  catch {
+    const i = document.createElement('textarea'); i.value = EMAIL; document.body.appendChild(i);
+    i.select(); document.execCommand('copy'); i.remove();
+  }
+  toast('Email copied to your clipboard.');
+});
+ $('#cvbtn').addEventListener('click', () => {
+  const cv = [
+    '============================================================',
+    '  SHREEVARIKA NAGAMMAL',
+    '  Software Engineer — Computerized System Validation',
+    '  Software Testing · Life-Sciences Compliance',
+    '============================================================',
+    '',
+    'LOCATION   : Pune, Maharashtra, India',
+    'EMPLOYER   : Capgemini — Software Engineer (Full-time)',
+    'CLIENTS    : Smith+Nephew & Olympus (Medical Devices) via',
+    '             Capgemini Pune',
+    'EDUCATION  : B.Tech, Biomedical Engineering — SRM University',
+    'CERTIFICATION : Six Sigma Green Belt',
+    'LINKEDIN   : ' + LINKEDIN.replace('https://',''),
+    'EMAIL      : ' + EMAIL,
+    '',
+    '------------------------------------------------------------',
+    'PROFILE',
+    '------------------------------------------------------------',
+    'Software Engineer specializing in Computerized System',
+    'Validation (CSV), Software Testing and Life-Sciences',
+    'Compliance, with a strong foundation in Biomedical',
+    'Engineering. Experienced across requirement analysis, risk',
+    'assessment, validation planning, test execution, validation',
+    'documentation and cross-functional collaboration in',
+    'regulated environments. Committed to reliable, efficient,',
+    'compliant systems that improve quality, patient safety and',
+    'operational excellence.',
+    '',
+    '------------------------------------------------------------',
+    'CORE EXPERTISE',
+    '------------------------------------------------------------',
+    '- Computerized System Validation (CSV)',
+    '- Software Testing & Validation | Manual Testing',
+    '- Test Case Creation | Defect Management & QA',
+    '- Robotics System Testing',
+    '- Regulatory Compliance: 21 CFR Part 11, GAMP 5',
+    '- ISO 13485 | ISO 14971',
+    '- Requirement Analysis & Documentation',
+    '- Risk Assessment & Validation Documentation',
+    '- Six Sigma Green Belt (DMAIC)',
+    '',
+    '------------------------------------------------------------',
+    'EXPERIENCE',
+    '------------------------------------------------------------',
+    'Software Engineer — Capgemini, Pune (Full-time)',
+    '- Validation & analysis within regulated environments on the',
+    '  Smith+Nephew and Olympus medical-device accounts',
+    '- Requirement analysis, risk assessment, validation planning,',
+    '  test execution & validation documentation',
+    '- Robotics system testing & cross-functional collaboration',
+    '- Six Sigma Green Belt — DMAIC-driven process improvement',
+    '',
+    'INTERNSHIPS',
+    'Bloom Life Hospital — biomedical systems, equipment',
+    '  calibration, healthcare regulatory documentation',
+    'Sanmina — process validation, quality systems, regulatory',
+    '  documentation in manufacturing',
+    '',
+    '============================================================',
+    'Generated live from her portfolio — thank you for reading.'
+  ].join('\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([cv], { type:'text/plain' }));
+  a.download = 'Shreevarnika_Nagammal_CV.txt';
+  a.click(); URL.revokeObjectURL(a.href);
+  toast('CV downloaded — plain text, ATS-friendly.');
+});
+</script>
+</body>
+</html>
